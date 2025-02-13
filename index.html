@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Card UI</title>
+  </head>
+  <body>
+    <div class="container">
+      <svg tabindex="-1" aria-hidden="true" class="round-border" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="rounded-tabbed">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="rounded-tabbed"></feColorMatrix>
+            <feComposite in="SourceGraphic" in2="rounded-tabbed" operator="atop"></feComposite>
+          </filter>
+        </defs>
+      </svg>
+      <div class="card">
+        <div class="top" style="filter: url('#rounded-tabbed');">
+          <div class="inner-top">
+            <div class="info">
+              <p class="title">BMW M5 Sedan!</p>
+              <p class="description">Introducing the new BMW M5 Sedan Plug-in Hybrid - where racetrack-ready M driving dynamics meet elegant everyday driving. Discover this high-performance sedan sports car.
+              </p>
+              <a href="" class="more">Learn more<span>→</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="bottom" style="filter: url('#rounded-tabbed');">
+          <div class="inner-bottom">
+            <video src="BMW M5 Sedan.mp4" autoplay loop muted></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
